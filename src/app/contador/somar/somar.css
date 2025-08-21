@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.0em;
+  text-align: center;
+}
+
+.botoes-centro {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.btn-somar {
+  background-color: lightgreen;
+  font-size: 2.0em;
+}
+
+.btn-subtrair {
+  background-color: lightcoral;
+  font-size: 2.0em;
+}
+
+.timao{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
