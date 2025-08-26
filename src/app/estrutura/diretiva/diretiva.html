@@ -1,0 +1,21 @@
+<div class = "guru">
+    <h3> ====================== ENGENHARIA DE SOFTWARE UNIFIO ====================== </h3>
+
+    <button (click)="toggleLista()">
+        {{ exibirLista ? 'Ocultar Lista' : 'Exibir Lista' }}
+    </button>
+
+    <div *ngIf="exibirLista">
+        <h3>Lista de Alunos</h3>
+        <ul [ngStyle]="{ 'font-size.px': fontSize }">
+            <li *ngFor="let aluno of alunos"
+                    [ngClass]="{ 'ativo': aluno.statusAluno, 'inativo': !aluno.statusAluno }">
+                ID: {{aluno.idAluno}} | Nome: {{aluno.nomeAluno}} | Status: {{aluno.statusAluno ? 'Ativo' : 'Inativo'}}
+            </li>
+        </ul>
+        <button (click)="aumentarFonte()">+</button>
+        <button (click)="diminuirFonte()">-</button>
+    </div>
+
+    <button (click)="alterarAluno()">Alterar Aluno</button>
+</div>

@@ -1,0 +1,13 @@
+
+.ativo {
+	color: blue;
+	font-weight: bold;
+}
+
+.inativo {
+	color: red;
+}
+
+.guru{
+    text-align: center;
+}

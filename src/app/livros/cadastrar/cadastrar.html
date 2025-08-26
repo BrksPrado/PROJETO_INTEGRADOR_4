@@ -9,8 +9,24 @@
 <body>
 
 <h2>Tela Cadastro Livros</h2>
-{{valor}} - <button (click)="dizerOi()"> Clique Aqui</button>
+<!-- {{valor}} - <button (click)="dizerOi()"> Clique Aqui</button> -->
+
+<p *ngIf="mostrarMensagem"> Esta mensagem é exibida condicionalmente!</p>
+<button (click)="toggleMensagem()">Alterar Mensagem</button>
 <br><br>
-<img [src]="caminhoImagem" alt="Imagem">
+
+<ul>
+  <li *ngFor="let item of listaItens">{{ item }}</li>
+</ul>
+<button (click)="alterarItens()">Alterar Itens</button>
+
+<div [ngClass]="{'destaque': isDestaque, 'erro': hasError}">
+  <p>Campo 01.</p>
+</div>
+
+<div [ngStyle]="{ 'background-color': corDeFundo, 'font-size': tamanhoFonte + 'px' }">
+  <p>Campo 02.</p>
+</div>
+
 </body>
 </html>
