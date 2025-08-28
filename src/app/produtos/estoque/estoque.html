@@ -1,0 +1,33 @@
+<div class="bloco-produtos">
+	<h2>Lista de Produtos Estoque</h2>
+	<button (click)="aumentarPrecos()">AUMENTAR PREÇOS EM 10%</button>
+	<button (click)="diminuirPrecos()">DIMINUIR PREÇOS EM 10%</button>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>NOME</th>
+				<th>PREÇO</th>
+				<th>ESTOQUE</th>
+				<th>STATUS</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let produto of produtos">
+				<td>{{ produto.id }}</td>
+				<td>{{ produto.nome }}</td>
+				<td [ngStyle]="{ color: produto.preco > 2000 ? 'blue' : 'black' }">
+					R$ {{ produto.preco | number:'1.2-2' }}
+				</td>
+				<td>{{ produto.estoque }}</td>
+				<td [ngClass]="{
+							'disponivel': produto.estoque > 0,
+							'indisponivel': produto.estoque <= 0
+						}">
+                    <span *ngIf="produto.estoque > 0"><b>DISPONÍVEL</b></span>
+					<span *ngIf="produto.estoque <= 0"><b>INDISPONÍVEL</b></span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

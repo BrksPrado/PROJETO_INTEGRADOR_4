@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { EstruturaRoutingModule } from './estrutura-routing-module';
 import { Diretiva } from './diretiva/diretiva';
 
-
 @NgModule({
   declarations: [
     Diretiva
