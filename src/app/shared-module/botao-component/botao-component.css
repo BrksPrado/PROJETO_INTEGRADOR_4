@@ -1,0 +1,10 @@
+/* Estilizar o botão */
+.botao {
+  background-color: #00a72a;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 12px;
+}

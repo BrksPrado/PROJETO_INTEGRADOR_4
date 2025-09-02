@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LivrosRoutingModule } from './livros-routing-module';
 import { Cadastrar } from './cadastrar/cadastrar';
+import { UsuariosModule } from '../usuarios/usuarios-module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { Cadastrar } from './cadastrar/cadastrar';
   ],
   imports: [
     CommonModule,
-    LivrosRoutingModule
+    LivrosRoutingModule,
+    UsuariosModule
   ]
 })
 export class LivrosModule { }
